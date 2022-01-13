@@ -1,6 +1,6 @@
 var bound int = *
 
-func haddock() {
+func adhoc() {
 	ch := make(chan int)
 
 	for i := 0; i < bound; i++ {

@@ -1,4 +1,4 @@
-func haddock() {
+func adhoc() {
 	num_messages := 5
 
 	ch := make(chan int)

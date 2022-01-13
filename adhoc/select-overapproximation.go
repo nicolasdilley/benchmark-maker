@@ -1,4 +1,4 @@
-func haddock() {
+func adhoc() {
 	ch := make(chan int)
 	doneCh := make(chan int, bound)
 

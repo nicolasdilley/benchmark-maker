@@ -1,4 +1,4 @@
-func haddock(){
+func adhoc(){
 	ch := make(chan int)
 
 	defer func(){

@@ -1,7 +1,7 @@
 var bound int = *
 
 
-func haddock() {
+func adhoc() {
 
 	ch := make(chan int, bound)
 
