@@ -1,13 +1,17 @@
-// type = all
+// type = ALL
 package main
 
+import "os"
+
 func main() {
-	// CP
+	CP
 	applyOnce(func() {
-		// CS
+		CS
 	})
 }
 
 func applyOnce(f func()) {
-	f()
+	if len(os.Args) > 1 {
+		f()
+	}
 }

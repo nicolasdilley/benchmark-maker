@@ -8,6 +8,6 @@ func main() {
 	ch <- 0
 	<-ch
 
-	// CS
+	CS
 
 }

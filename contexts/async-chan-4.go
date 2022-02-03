@@ -14,6 +14,6 @@ func main() {
 	<-ch
 	<-ch
 
-	// CS
+	CS
 
 }

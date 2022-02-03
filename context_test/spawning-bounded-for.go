@@ -1,11 +1,13 @@
 // type = ALL
-// bounds = 10000
+// bounds = 10 , 100 , 10000, len(os.Args)
 package main
 
 func main() {
 	CP
 
 	for i := 0; i < bound; i++ {
-		CS
+		go func() {
+			CS
+		}()
 	}
 }

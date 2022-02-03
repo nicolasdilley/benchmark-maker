@@ -1,5 +1,5 @@
 // type = MUTEX
-go func(){
+go func() {
 	mu.Lock()
-}
+}()
 mu.Lock()
