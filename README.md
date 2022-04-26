@@ -13,7 +13,7 @@ contexts, programs with holes, with 3 different code elements:
 ## Installation
 
 To build the tool the Go ecosystem is required. 
-You can find the instruction to install Go [here]{https://go.dev/doc/install}.
+You can find the instruction to install Go [here](https://go.dev/doc/install).
 
 If you already have Go install simply clone this repo.
 ```git clone https://github.com/nicolasdilley/benchmark-maker```
@@ -55,13 +55,15 @@ concurrency primitives. This is achieved by commenting at the top:
 3. ```// type = RWMU``` for sync.RWMutex snippets. The rwmutex variable is ```mu```.
 4. ```// type = WG``` for sync.Waitgroup snippets. The waitgroup variable is ```wg```.
 
-### Generating and verifying the set of synthesised programs
+### Generating and verifying a set of synthesised programs
 
 The tool expects as argument the folder containing the contexts followed by
 the folder containing the code snippets.
 
-Run ```./benchmark-maker contexts snippets``` to instantiate and verify the contexts in ```contexts``` with
-the code snippets in ```snippets```.
+To instantiate and verify the contexts in ```contexts``` with
+the code snippets in ```snippets```, run 
+
+```./benchmark-maker contexts snippets``` 
 
 The console will output the result of verifying each code snippets into all
 contexts with each tool (given as a list ```verifiers``` in ```verify.go```).
@@ -72,8 +74,9 @@ shows the name of the contexts and the bound used. The rest of the columns
 show the result and the time taken by each tool in the order they were given
 in the list ```verifiers``` in ```verify.go```.
 
-The results are :
-	1. ```\cmark``` for a bug was found.
-	2. ```\xmark``` for no bug reported.
-	3. ```\crash``` which reports that the tool crashed.
-	4. ```\nosupport``` which reports that the tool reported that it did not support the benchmark.
+The verification results are:
+
+1. ```\cmark``` for a bug was found.
+2. ```\xmark``` for no bug reported.
+3. ```\crash``` which reports that the tool crashed.
+4. ```\nosupport``` which reports that the tool reported that it did not support the benchmark.
