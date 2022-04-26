@@ -1,4 +1,0 @@
-[(Sync_main_main_1t0 + tau + tausync)*]
-(
-(<LOCK_main_main_1t0>true => mu Z .(<Sync_main_main_1t0>true) || (<tau>Z || <tausync>Z || <Sync_main_main_1t0>Z))
-)

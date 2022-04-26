@@ -1,4 +1,0 @@
-[(Sync_main_main_1t0 + tau + tausync)*]
-( <LOCK_main_main_1t0>true
-=>
-<Sync_main_main_1t0 + tau + tausync>true)

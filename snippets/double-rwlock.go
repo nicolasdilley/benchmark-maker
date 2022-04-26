@@ -1,3 +1,3 @@
 // type = RWMUTEX
-mu.RLock()
+mu.Lock()
 mu.Lock()

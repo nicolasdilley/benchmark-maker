@@ -65,7 +65,11 @@ func verifyModels(models map[string]map[string][]Model) {
 		for _, modelName := range names {
 
 			for _, model := range models[name][modelName] {
-				fmt.Print("& \\textit{" + modelName + "} & ")
+				if model.Bound != "" {
+					fmt.Print("& \\textit{"+modelName, "(", model.Bound, ")} & ")
+				} else {
+					fmt.Print("& \\textit{"+modelName, "} & ")
+				}
 				f.WriteString("& \\textit{" + modelName + "} & ")
 
 				for i, verifier := range verifiers {
@@ -83,6 +87,9 @@ func verifyModels(models map[string]map[string][]Model) {
 					case CRASH:
 						to_print = " \\crash "
 					}
+
+					to_print += fmt.Sprintf(" %d", ver.Time)
+
 					fmt.Print(to_print)
 					f.WriteString(to_print)
 
@@ -105,10 +112,8 @@ func verifyModels(models map[string]map[string][]Model) {
 func putMinimalInFrontOfQueue(names []string) []string {
 	for i, name := range names {
 		if name == "minimal" {
-			fmt.Println(name)
 			return append([]string{"minimal"}, append(names[:i], names[i+1:]...)...)
 		}
 	}
-	panic("should have a minimal")
 	return names
 }
