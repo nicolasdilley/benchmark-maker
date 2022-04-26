@@ -16,9 +16,11 @@ To build the tool the Go ecosystem is required.
 You can find the instruction to install Go [here](https://go.dev/doc/install).
 
 If you already have Go install simply clone this repo.
+
 ```git clone https://github.com/nicolasdilley/benchmark-maker```
 
 and build the tool.
+
 ```go get && go build```
 
 ## Usage 
@@ -39,8 +41,10 @@ specifying as a comment declared a the top of the context:
 2. ```// type = CH``` If they only allow channels.
 
 The value given to the bound in the program is also given as a comment as
-follow: ```// bounds = 10 000 ,len(os.Args)``` which will instantiate
-programs with bounds of 10 000 and ```len(os.Args)```for example.
+follow: 
+
+```// bounds = 10 000 ,len(os.Args)``` which will instantiate
+programs with bounds of ```10 000``` and ```len(os.Args)```for example.
 
 A set of contexts can be found in the ```contexts``` folder.
 
@@ -61,7 +65,7 @@ The tool expects as argument the folder containing the contexts followed by
 the folder containing the code snippets.
 
 To instantiate and verify the contexts in ```contexts``` with
-the code snippets in ```snippets```, run 
+the code snippets in ```snippets```, run: 
 
 ```./benchmark-maker contexts snippets``` 
 
@@ -71,7 +75,7 @@ The output can also be found in ```text.log```.
 
 The output for each code snippets is formatted as follow. The first column
 shows the name of the contexts and the bound used. The rest of the columns
-show the result and the time taken by each tool in the order they were given
+show the results and the time taken by each tool in the order they were given
 in the list ```verifiers``` in ```verify.go```.
 
 The verification results are:
